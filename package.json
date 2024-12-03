@@ -1,0 +1,48 @@
+{
+  "name": "aerodrome-verification-api",
+  "version": "1.0.0",
+  "description": "Aerodrome contract interaction verification",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Olanetsoft/aerodrome-verification-api.git"
+  },
+  "keywords": [
+    "Aerodrome",
+    "Nodejs"
+  ],
+  "author": "Idris Olubisi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Olanetsoft/aerodrome-verification-api/issues"
+  },
+  "homepage": "https://github.com/Olanetsoft/aerodrome-verification-api#readme",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.6",
+    "ethers": "^6.13.4",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^8.0.0",
+    "joi": "^17.13.3",
+    "node-cache": "^5.1.2",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.1",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.7",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
