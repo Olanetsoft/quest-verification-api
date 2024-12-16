@@ -26,6 +26,7 @@ export class BlockchainService {
   private cache: NodeCache;
   private queryCount: number = 0;
   private cacheHits: number = 0;
+  private static isInitialized = false;
 
   constructor() {
     this.provider = new ethers.JsonRpcProvider(config.rpcUrl);
@@ -41,6 +42,11 @@ export class BlockchainService {
     });
 
     setInterval(() => this.logStats(), 10800000); // 3 hours
+
+    if (!BlockchainService.isInitialized) {
+      this.clearCache();
+      BlockchainService.isInitialized = true;
+    }
   }
 
   private logStats() {
@@ -173,7 +179,10 @@ export class BlockchainService {
       }
 
       const isMinter = await this.checkMinterRole(normalizedAddress);
-      this.cache.set(normalizedAddress, isMinter);
+      if (isMinter) {
+        this.cache.set(normalizedAddress, true);
+        logger.info(`Address is minter, time: ${performance.now() - start}ms`);
+      }
 
       logger.info(`Completed check, time: ${performance.now() - start}ms`);
       return isMinter;
@@ -189,6 +198,16 @@ export class BlockchainService {
       return currentMinter.toLowerCase() === address.toLowerCase();
     } catch (error) {
       return false;
+    }
+  }
+
+  // Add this method to your class
+  public clearCache(): void {
+    try {
+      this.cache.flushAll();
+      logger.info("Cache cleared successfully");
+    } catch (error) {
+      logger.error("Error clearing cache:", error);
     }
   }
 }
