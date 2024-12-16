@@ -17,7 +17,7 @@ const ABI = [
 
 const BLOCK_RANGE = 1000;
 const RECENT_BLOCKS = 1800;
-const CACHE_TTL = 86400;
+const CACHE_TTL = 3600; // 1 hour
 const MAX_RETRIES = 2;
 
 export class BlockchainService {
