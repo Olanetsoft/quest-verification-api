@@ -100,10 +100,10 @@ Contains partner contract details and campaign information:
       "chainId": 8453,
       "campaigns": {
         "doge_feb_2025": {
-          "name": "D.O.G.E February 2025 Campaign",
-          "startDate": "2025-02-01T00:00:00Z",
-          "endDate": "2025-02-28T23:59:59Z",
-          "description": "D.O.G.E campaign on Aerodrome for February 2025"
+          "name": "D.O.G.E December 2024 Campaign",
+          "startDate": "2024-12-12T00:00:00Z",
+          "endDate": "2024-12-27T23:59:59Z",
+          "description": "D.O.G.E campaign on Aerodrome for December 2024"
         }
       }
     }
