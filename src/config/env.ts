@@ -10,8 +10,8 @@ const envSchema = joi
       .valid("development", "production", "test")
       .required(),
     PORT: joi.number().default(80), // Changed to 80 as per Galxe requirements
-    RPC_URL: joi.string().required(),
-    AERODROME_ADDRESS: joi.string().required(),
+    BASE_RPC_URL: joi.string().required(),
+    BASE_AERODROME_ADDRESS: joi.string().required(),
   })
   .unknown();
 
@@ -24,7 +24,7 @@ if (error) {
 export default {
   env: env.NODE_ENV,
   port: env.PORT,
-  rpcUrl: env.RPC_URL,
-  aerodromeAddress: env.AERODROME_ADDRESS,
+  rpcUrl: env.BASE_RPC_URL,
+  aerodromeAddress: env.BASE_AERODROME_ADDRESS,
   fallbackRpcUrls: env.FALLBACK_RPC_URLS?.split(",") || [],
 };
