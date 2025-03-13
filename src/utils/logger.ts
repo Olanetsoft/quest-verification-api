@@ -1,8 +1,19 @@
 import winston from "winston";
-import config from "../config/env";
+import path from "path";
 
+// Create logs directory if it doesn't exist
+import fs from "fs";
+const logsDir = path.join(process.cwd(), "logs");
+if (!fs.existsSync(logsDir)) {
+  fs.mkdirSync(logsDir);
+}
+
+// Determine log level from environment
+const logLevel = process.env.NODE_ENV === "development" ? "debug" : "info";
+
+// Create winston logger
 const logger = winston.createLogger({
-  level: config.env === "development" ? "debug" : "info",
+  level: logLevel,
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.json()
@@ -15,11 +26,11 @@ const logger = winston.createLogger({
       ),
     }),
     new winston.transports.File({
-      filename: "error.log",
+      filename: path.join(logsDir, "error.log"),
       level: "error",
     }),
     new winston.transports.File({
-      filename: "combined.log",
+      filename: path.join(logsDir, "combined.log"),
     }),
   ],
 });

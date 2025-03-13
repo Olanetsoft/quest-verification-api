@@ -1,0 +1,23 @@
+{
+  "contracts": {
+    "base_aerodrome": {
+      "name": "Aerodrome on Base",
+      "address": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+      "rpcUrlRef": "BASE_RPC_URL",
+      "fallbackRpcUrlRefs": [
+        "BASE_FALLBACK_RPC_1",
+        "BASE_FALLBACK_RPC_2",
+        "BASE_FALLBACK_RPC_3"
+      ],
+      "chainId": 8453,
+      "campaigns": {
+        "doge_december_2024": {
+          "name": "D.O.G.E December 2024 Campaign",
+          "startDate": "2024-12-12T00:00:00Z",
+          "endDate": "2024-12-27T23:59:59Z",
+          "description": "D.O.G.E campaign on Aerodrome for December 2024"
+        }
+      }
+    }
+  }
+}

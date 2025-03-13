@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import verificationRoutes from "./routes/verification";
-import config from "./config/env";
+import configLoader from "./config/config-loader";
 import logger from "./utils/logger";
 
 const app = express();
@@ -26,6 +26,13 @@ app.use(
   }
 );
 
-app.listen(config.port, () => {
-  logger.info(`Server running on port ${config.port}`);
+// Get environment configuration
+const { port } = configLoader.getEnvConfig();
+
+// Start the server
+app.listen(port, () => {
+  logger.info(`Server running on port ${port}`);
+  logger.info(
+    `Available contracts: ${configLoader.getAvailableContracts().join(", ")}`
+  );
 });
