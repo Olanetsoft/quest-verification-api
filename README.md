@@ -170,7 +170,7 @@ GET /api/contracts/:contractId/campaigns/:campaignId
 Reloads the configuration from the JSON file without restarting the service.
 
 ```
-POST /api/reload-config
+GET /api/reload-config
 ```
 
 ### Clear Cache
@@ -178,7 +178,7 @@ POST /api/reload-config
 Clears the verification cache to force fresh blockchain queries.
 
 ```
-POST /api/clear-cache
+GET /api/clear-cache
 ```
 
 ## Sample Requests
