@@ -1,7 +1,7 @@
 {
   "contracts": {
-    "base_aerodrome": {
-      "name": "Aerodrome on Base",
+    "doge_base_aerodome": {
+      "name": "D.O.G.E on Base via Aerodome",
       "address": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
       "rpcUrlRef": "BASE_RPC_URL",
       "fallbackRpcUrlRefs": [
@@ -12,10 +12,29 @@
       "chainId": 8453,
       "campaigns": {
         "doge_december_2024": {
-          "name": "D.O.G.E December 2024 Campaign",
+          "name": "D.O.G.E december 2024 campaign",
           "startDate": "2024-12-12T00:00:00Z",
           "endDate": "2024-12-27T23:59:59Z",
-          "description": "D.O.G.E campaign on Aerodrome for December 2024"
+          "description": "D.O.G.E campaign on Aerodrome for december 2024"
+        }
+      }
+    },
+    "babydoge_base_aerodome": {
+      "name": "BabyDoge on Base via Aerodome",
+      "address": "0x58ecEF26335Af7b04A998105a6603B0Dc475aF33",
+      "rpcUrlRef": "BASE_RPC_URL",
+      "fallbackRpcUrlRefs": [
+        "BASE_FALLBACK_RPC_1",
+        "BASE_FALLBACK_RPC_2",
+        "BASE_FALLBACK_RPC_3"
+      ],
+      "chainId": 8453,
+      "campaigns": {
+        "babydoge_march_2025": {
+          "name": "BabyDoge march 2025 campaign",
+          "startDate": "2025-03-26T00:00:00Z",
+          "endDate": "2025-04-23T23:59:59Z",
+          "description": "$BABYDOGE is live on Aerodome!"
         }
       }
     }
