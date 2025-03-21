@@ -92,8 +92,8 @@ Contains partner contract details and campaign information:
 ```json
 {
   "contracts": {
-    "base_aerodrome": {
-      "name": "Aerodrome on Base",
+    "doge_base_aerodome": {
+      "name": "D.O.G.E on Base via Aerodrome",
       "address": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
       "rpcUrlRef": "BASE_RPC_URL",
       "fallbackRpcUrlRefs": ["BASE_FALLBACK_RPC_1", "BASE_FALLBACK_RPC_2"],
@@ -186,7 +186,7 @@ GET /api/clear-cache
 ### Example 1: Verify DOGE Campaign Interaction
 
 ```
-GET /api/verify/0x1234567890abcdef1234567890abcdef12345678?contract=base_aerodrome&campaign=doge_feb_2025
+GET /api/verify/0x1234567890abcdef1234567890abcdef12345678?contract=doge_base_aerodome&campaign=doge_feb_2025
 ```
 
 Response:
