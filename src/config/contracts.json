@@ -32,7 +32,7 @@
       "campaigns": {
         "babydoge_march_2025": {
           "name": "BabyDoge march 2025 campaign",
-          "startDate": "2025-03-26T00:00:00Z",
+          "startDate": "2025-03-25T00:00:00Z",
           "endDate": "2025-04-23T23:59:59Z",
           "description": "$BABYDOGE is live on Aerodome!"
         }
